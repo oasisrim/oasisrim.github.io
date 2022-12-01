@@ -16,7 +16,12 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => subscribe("new-world")}>
+        <button
+          onClick={() => {
+            console.log(import.meta.env.VITE_APP_SYNC_URL);
+            subscribe("new-world");
+          }}
+        >
           Subscribe to New World Notifications!
         </button>
       </div>
